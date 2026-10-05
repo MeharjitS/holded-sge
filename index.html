@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Holded - Estudi de mercat d'un SGE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- CAPÇALERA -->
+<header>
+  <h1>Holded</h1>
+  <p>Estudi de mercat d'un Sistema de Gestió Empresarial · Sistemes de gestió empresarial, 2n DAM</p>
+  <p>Alumnes: Zayd i Meharjit</p>
+</header>
+
+<!-- MENÚ -->
+<nav>
+  <a href="#introduccio">Introducció</a>
+  <a href="#general">Informació general</a>
+  <a href="#llicencies">Llicències i preus</a>
+  <a href="#sgbd">SGBD</a>
+  <a href="#instalacio">Instal·lació i accés</a>
+  <a href="#moduls">Mòduls</a>
+  <a href="#comparativa">Comparativa</a>
+  <a href="#feina">Ofertes de feina</a>
+  <a href="#avantatges">Avantatges i inconvenients</a>
+  <a href="#bibliografia">Bibliografia</a>
+</nav>
+
+<main>
+
+<!-- 1. INTRODUCCIÓ -->
+<section id="introduccio">
+  <h2>1. Introducció</h2>
+
+  <p>Un <strong>SGE</strong> (Sistema de Gestió Empresarial) és un programari que centralitza i automatitza els processos d'una empresa (vendes, facturació, comptabilitat, estoc…) en una sola plataforma amb dades compartides. Dins d'aquesta categoria hi trobem l'<strong>ERP</strong> (gestió integral de recursos), el <strong>CRM</strong> (relació amb els clients) i el <strong>BI</strong> (anàlisi de dades).</p>
+
+  <p>Hem triat <strong>Holded</strong>, un <strong>ERP al núvol</strong> pensat per a pimes que també inclou funcions de <strong>CRM</strong>. Té l'origen a Barcelona, cosa que el fa més proper i interessant.</p>
+
+  <img src="img/logo-holded.jpg" alt="Logotip de Holded" width="250">
+
+  <img src="img/panellprincipal.png" alt="Panell principal de Holded"> 
+</section>
+
+<!-- 2. INFORMACIÓ GENERAL -->
+<section id="general">
+  <h2>2. Informació general del sistema</h2>
+
+  <h3>2.1 Desenvolupadors i història cronològica</h3>
+  <p>Holded va ser fundada per dues persones:</p>
+  <ul>
+    <li><strong>Javi Fondevila (Co-CEO):</strong> provinent del món dels negocis i el dret.</li>
+    <li><strong>Bernat Ripoll (Co-CEO i desenvolupador):</strong> snowboarder professional i programador autodidacte, va ser qui va escriure el codi de la primera versió del programari.</li>
+  </ul>
+
+  <img src="img/fundadorsholded.jpeg" alt="Javi Fondevila i Bernat Ripoll, fundadors de Holded" width="450"> 
+
+  <h4>Cronologia</h4>
+  <ul class="cronologia">
+    <li><strong>2016 · Fundació i llançament.</strong> Neix a Barcelona i aconsegueix 239.000 € de finançament inicial. El llançament formal és al setembre.</li>
+    <li><strong>2018.</strong> Tanca una altra ronda de finançament d'1,3 milions d'euros i arriba als 10.000 usuaris.</li>
+    <li><strong>2019 · Expansió.</strong> El fons internacional Lakestar lidera una nova ronda de 6 milions d'euros per millorar el producte i iniciar l'expansió europea.</li>
+    <li><strong>2021.</strong> El gegant tecnològic noruec Visma adquireix Holded per una xifra d'uns 120-190 milions d'euros. Els fundadors continuen al capdavant de l'empresa.</li>
+    <li><strong>2025.</strong> La companyia tanca l'exercici amb uns ingressos de 35,5 milions d'euros.</li>
+    <li><strong>2026 · Aniversari i Intel·ligència Artificial.</strong> En el seu desè aniversari, la plataforma assoleix més de 900.000 usuaris. Llança una API v2 avançada per a desenvolupadors i integra intensament la IA (com el seu assistent Coney) per automatitzar fins al 95% de les tasques comptables.</li>
+  </ul>
+
+  <h3>2.2 Data de la primera versió i versió estable</h3>
+  <p>La primera versió es va llançar oficialment el <strong>setembre de 2016</strong>. Com que és un programari basat en el núvol (SaaS), <strong>no existeix una data única de «versió estable»</strong>: el sistema s'actualitza de manera contínua. L'última gran reestructuració de la interfície i de les funcions es va desplegar el <strong>25 de novembre de 2024</strong>.</p>
+
+  <h3>2.3 Llenguatges de programació</h3>
+  <ul>
+    <li><strong>Backend (servidor):</strong> el nucli està escrit en <strong>PHP</strong>, amb frameworks com <strong>Laravel</strong> o <strong>Symfony</strong>, per gestionar la lògica de comptabilitat, facturació i base de dades.</li>
+    <li><strong>Frontend (interfície web):</strong> <strong>JavaScript / TypeScript</strong>.</li>
+    <li><strong>Aplicació mòbil:</strong> creada amb <strong>React Native</strong>.</li>
+    <li><strong>Bases de dades:</strong> sistemes com <strong>MongoDB</strong> i tecnologies de núvol de Google.</li>
+  </ul>
+
+  <h3>2.4 Plataformes compatibles</h3>
+  <p>Holded és un SaaS: no requereix instal·lació i funciona de forma idèntica en <strong>qualsevol sistema operatiu</strong> (Windows, Ubuntu, macOS…) a través d'un navegador web amb connexió a Internet. També ofereix una aplicació per al mòbil.</p>
+
+  <h3>2.5 Arquitectura del programari</h3>
+  <ul>
+    <li><strong>Model client-servidor:</strong> estructura 100% al núvol (SaaS). El client (navegador o app) només pinta la interfície, mentre que el servidor centralitzat processa les dades de manera segura.</li>
+    <li><strong>Frontend interactiu (Angular / frameworks SPA):</strong> funciona com una <em>Single Page Application</em>, cosa que permet una navegació fluida sense recarregar la pàgina, actualitzant les dades dinàmicament en format JSON.</li>
+    <li><strong>Comunicació via API REST:</strong> client i servidor es comuniquen amb peticions HTTP segures (GET, POST…). Aquesta mateixa API està oberta perquè botigues externes (Shopify, WooCommerce, etc.) es puguin connectar amb Holded.</li>
+    <li><strong>Backend en capes (3 nivells):</strong>
+      <ul>
+        <li><em>Capa d'entrada:</em> rep les peticions de l'API i controla la seguretat.</li>
+        <li><em>Capa de negoci:</em> el «cervell» que calcula impostos, factures i comptabilitat.</li>
+        <li><em>Capa de dades:</em> gestiona i emmagatzema la informació a les bases de dades.</li>
+      </ul>
+    </li>
+  </ul>
+  <img src="img/Diagrama1.png" alt="Esquema de l'arquitectura de Holded">
+</section>
+
+<!-- 3. LLICÈNCIES I PREUS -->
+<section id="llicencies">
+  <h2>3. Tipus de llicència i preus</h2>
+
+  <h3>3.1 Tipus de llicència</h3>
+  <p>Holded utilitza una llicència <strong>comercial i propietària</strong> sota un model de subscripció mensual o anual.</p>
+  <ul>
+    <li><strong>Comercial: sí.</strong> S'ha de pagar de manera recurrent per utilitzar-lo. Ofereix cinc plans (Plus, Bàsic, Estàndard, Avançat i Premium) segons el volum de factures i usuaris.</li>
+    <li><strong>Propietària (no lliure): sí.</strong> El codi font és tancat i pertany a l'empresa; l'usuari només adquireix el dret d'ús de la plataforma al núvol, però no pot modificar-ne el codi ni distribuir-lo.</li>
+    <li><strong>Gratuïta: no.</strong> No té cap versió gratuïta permanent. L'única opció gratuïta és un <strong>període de prova de 14 dies</strong>.</li>
+  </ul>
+
+  <h3>3.2 Modalitats de distribució</h3>
+  <p>Holded és un model <strong>SaaS</strong> basat en el núvol, amb accés mitjançant navegador web i aplicacions mòbils, i amb actualitzacions automàtiques. <strong>No permet la instal·lació en servidors propis</strong> (no hi ha On-Premise) i les dades es mantenen emmagatzemades de forma centralitzada.</p>
+
+  <h3>3.3 Modalitats de subscripció i preus</h3>
+  <p>Subscripció mensual (sense permanència) amb <strong>14 dies de prova</strong>. Preus base sense IVA:</p>
+
+  <div class="taula-contenidor">
+  <table>
+    <tr><th>Pla</th><th>Preu</th><th>Usuaris</th><th>Factures a l'any</th></tr>
+    <tr><td>Plus</td><td>15 €/mes</td><td>1</td><td>fins a 250</td></tr>
+    <tr><td>Bàsic</td><td>29 €/mes</td><td>2</td><td>fins a 1.000</td></tr>
+    <tr><td>Estàndard</td><td>59 €/mes</td><td>4</td><td>fins a 3.000</td></tr>
+    <tr><td>Avançat</td><td>99 €/mes</td><td>7</td><td>fins a 10.000</td></tr>
+    <tr><td>Premium</td><td>199 €/mes</td><td>15</td><td>il·limitades</td></tr>
+  </table>
+  </div>
+
+  <!-- Gràfic de barres -->
+  <div class="grafic">
+    <div class="fila"><span class="etiqueta">Plus</span><div class="barra-fons"><div class="barra" style="width: 8%;">15 €</div></div></div>
+    <div class="fila"><span class="etiqueta">Bàsic</span><div class="barra-fons"><div class="barra" style="width: 15%;">29 €</div></div></div>
+    <div class="fila"><span class="etiqueta">Estàndard</span><div class="barra-fons"><div class="barra" style="width: 30%;">59 €</div></div></div>
+    <div class="fila"><span class="etiqueta">Avançat</span><div class="barra-fons"><div class="barra" style="width: 50%;">99 €</div></div></div>
+    <div class="fila"><span class="etiqueta">Premium</span><div class="barra-fons"><div class="barra" style="width: 100%;">199 €</div></div></div>
+  </div>
+
+  <p>Segons holded.com, hi ha un <strong>50% de descompte els tres primers mesos</strong>, i el preu també depèn del tipus d'empresa.</p>
+
+  <h4>Complements de pagament (extensions modulars)</h4>
+  <ul>
+    <li><strong>Operacions i logística:</strong> Inventari (25 €/mes), TPV per a botigues físiques (25 €/mes), Fabricació (25 €/mes) i Catàleg B2B (10 €/mes).</li>
+    <li><strong>Recursos humans:</strong> control horari i vacances (1,50 €/empleat/mes) i gestió de nòmines (5 €/empleat/mes).</li>
+    <li><strong>Finances i suport:</strong> usuaris addicionals (10 €/mes), enviament de l'IVA en temps real a l'AEAT amb el SII (des de 30 €/mes) i Suport Premium (50 €/mes).</li>
+    <li><strong>Integracions:</strong> connexió directa amb plataformes de comerç electrònic (Shopify, Amazon), passarel·les de pagament (Stripe, PayPal) i automatització (Zapier).</li>
+  </ul>
+
+  <img src="img/preus.png" alt="Pàgina de preus de Holded">
+</section>
+
+<!-- 4. SGBD -->
+<section id="sgbd">
+  <h2>4. Sistemes gestors de bases de dades associats</h2>
+
+  <p>Holded és un ERP SaaS i <strong>no exposa públicament cap sistema gestor de bases de dades</strong> (SGBD) visible per als usuaris: tota la infraestructura d'emmagatzematge està gestionada i oculta dins la seva arquitectura pròpia al núvol. Segons la informació consultada, s'utilitzen sistemes com <strong>MongoDB</strong> (base de dades documental, NoSQL) i tecnologies de núvol de Google.</p>
+
+  <h3>Característiques de l'arquitectura de dades</h3>
+  <ul>
+    <li><strong>Programari 100% al núvol:</strong> no requereix servidors locals ni la gestió manual de cap base de dades per part de l'empresa o l'usuari.</li>
+    <li><strong>Accés via API:</strong> permet connectar botigues online o eines de tercers (Shopify, Stripe…) mitjançant la seva <strong>API REST</strong>, però l'SGBD subjacent roman sota el control exclusiu de l'equip tècnic de Holded.</li>
+    <li>En crear un compte, el sistema genera una <strong>base de dades segura i aïllada</strong> per a cada empresa.</li>
+  </ul>
+</section>
+
+<!-- 5. INSTAL·LACIÓ I ACCÉS -->
+<section id="instalacio">
+  <h2>5. Instal·lació i accés al sistema</h2>
+
+  <p>Holded és un ERP basat al 100% en el núvol, de manera que el procés de desplegament difereix dels programaris tradicionals: no requereix fitxers executables locals per a l'ordinador.</p>
+
+  <h3>5.1 Tipus d'instal·ladors</h3>
+  <p>Com que és un SaaS, <strong>no hi ha instal·ladors d'escriptori</strong>. Únicament es pot instal·lar l'aplicació oficial en dispositius mòbils, descarregant-la de l'<strong>App Store (iOS)</strong> o de la <strong>Google Play Store</strong>.</p>
+
+  <h3>5.2 Procés de contractació</h3>
+  <ol>
+    <li><strong>Alta a la plataforma:</strong> l'usuari crea un compte al web del proveïdor.</li>
+    <li><strong>Activació de l'entorn:</strong> el sistema crea a l'instant un espai de treball al núvol i una base de dades segura i aïllada per a l'empresa.</li>
+    <li><strong>Contractació i subscripció:</strong> es tria un pla mensual o anual segons els mòduls necessaris (Facturació, Inventari, CRM, Projectes, RRHH). Sense permanència.</li>
+  </ol>
+
+  <img src="img/registreholded.png" alt="Alta a Holded">
+
+  <h3>5.3 Modalitats d'accés</h3>
+  <ul>
+    <li><strong>Accés web (des de l'ordinador):</strong> és la forma principal d'utilitzar-lo. Només cal obrir el navegador (Chrome, Safari…).</li>
+    <li><strong>Accés app (mòbil o tauleta):</strong> pensada per a quan s'està fora de l'oficina: fitxar a la feina, mirar els comptes del banc o fer una foto a un tiquet per desar-lo automàticament.</li>
+    <li><strong>Accés client (programa per instal·lar):</strong> <strong>no existeix</strong>. Holded no té cap programa per descarregar a l'ordinador; tot funciona a través d'Internet.</li>
+  </ul>
+
+  <img src="img/Appmobilholded.png" alt="Aplicació mòbil de Holded" width="300">
+</section>
+
+<!-- 6. MÒDULS -->
+<section id="moduls">
+  <h2>6. Mòduls i funcionalitats</h2>
+
+  <p>Holded centralitza facturació, comptabilitat, CRM, inventari, projectes i recursos humans en una única plataforma. A diferència d'altres ERP, no cal contractar els mòduls per separat: els principals venen inclosos als plans, tot i que algunes funcionalitats extra es paguen com a complements. Els tres mòduls més importants són:</p>
+
+  <h3>6.1 Facturació i vendes</h3>
+  <p>És el nucli del sistema. Permet crear pressupostos, comandes, albarans i factures, gestionar cobraments i enviar documents als clients. També cobreix la facturació electrònica i l'adaptació a Verifactu. Les factures es poden automatitzar (recurrents) i queden vinculades a la comptabilitat i la tresoreria.</p>
+
+  <img src="img/factura.png" alt="Mòdul de facturació de Holded">
+
+  <h3>6.2 Comptabilitat i tresoreria</h3>
+  <p>Les factures i les despeses generen els assentaments comptables de forma automàtica. Inclou conciliació bancària, control del <em>cash flow</em>, impostos (models fiscals, Impost de Societats, SII als plans que ho inclouen) i informes financers. Tots els plans donen accés a l'assessoria o gestoria partner, que treballa sobre les mateixes dades en temps real.</p>
+
+  <img src="img/comptabilitat.png" alt="Mòdul de comptabilitat de Holded">
+
+  <h3>6.3 CRM i projectes (i inventari)</h3>
+  <p>El CRM gestiona contactes, oportunitats i l'embut de vendes (<em>pipeline</em>), i es connecta amb pressupostos i factures. El mòdul de projectes permet fer seguiment de tasques, hores i rendibilitat per projecte. A més, hi ha el mòdul d'inventari (complement de pagament) per controlar estoc, magatzems i compres, i un TPV per a botigues.</p>
+
+  <img src="img/crm.png" alt="Mòdul de CRM de Holded">
+
+  <h3>6.4 Capacitat de crear nous mòduls</h3>
+  <p>Holded és un programari <strong>propietari i tancat</strong>: no es poden crear mòduls nous dins del sistema, com passa a Odoo. Tot i això, es pot ampliar i integrar mitjançant la seva <strong>API</strong>:</p>
+  <ul>
+    <li><strong>API REST:</strong> utilitza codis de resposta HTTP i retorna les dades en format JSON. Documentació a <a href="https://developers.holded.com" target="_blank">developers.holded.com</a>; URL base: <code>https://api.holded.com</code>.</li>
+    <li><strong>Autenticació:</strong> es genera una API Key a Configuració &gt; Desenvolupadors i s'envia a la capçalera de cada petició. Les versions més noves parlen d'un API Token amb permisos configurables a Desenvolupadors &gt; Credencials.</li>
+    <li><strong>Integracions:</strong> Shopify, Amazon, Stripe, PayPal, Zapier, etc. (més de 13 integracions natives), a més de <em>webhooks</em>.</li>
+    <li><strong>Llenguatges:</strong> en ser una API REST/JSON, serveix qualsevol llenguatge que faci peticions HTTP: Python, JavaScript/Node.js, PHP, Java, C#, etc.</li>
+    <li><strong>Eines i IDE:</strong> Visual Studio Code, PyCharm, IntelliJ, Postman o Insomnia per provar els endpoints, i Zapier o Make per a integracions sense codi.</li>
+  </ul>
+
+  <h4>Exemple de codi (JavaScript)</h4>
+  <pre>// Petició a l'API de Holded amb la API Key a la capçalera
+fetch("https://api.holded.com/api/invoicing/v1/documents/invoice", {
+  method: "GET",
+  headers: { "key": "LA_TEVA_API_KEY" }
+})
+  .then(resposta =&gt; resposta.json())
+  .then(factures =&gt; console.log(factures));</pre>
+</section>
+
+<!-- 7. COMPARATIVA -->
+<section id="comparativa">
+  <h2>7. Comparativa amb els principals competidors</h2>
+
+  <p>Hem comparat Holded amb dos competidors: <strong>Odoo</strong> i <strong>SAP Business One</strong>.</p>
+
+  <div class="taula-contenidor">
+  <table>
+    <tr><th></th><th>Holded</th><th>Odoo</th><th>SAP Business One</th></tr>
+    <tr><td><strong>Llicència</strong></td><td>Propietària, SaaS</td><td>Community (lliure) i Enterprise (comercial)</td><td>Comercial</td></tr>
+    <tr><td><strong>Distribució</strong></td><td>Només núvol</td><td>Núvol, On-Premise, Odoo.sh</td><td>Núvol o On-Premise</td></tr>
+    <tr><td><strong>Preu</strong></td><td>De 15 a 199 €/mes segons el pla, sense IVA</td><td>Community gratuït; Enterprise per usuari/mes</td><td>A mida, sota pressupost</td></tr>
+    <tr><td><strong>Mòduls</strong></td><td>Tots integrats als plans</td><td>Centenars d'aplicacions i mòduls</td><td>Molt complet (fabricació, logística)</td></tr>
+    <tr><td><strong>Llenguatges</strong></td><td>API REST, qualsevol llenguatge</td><td>Python, XML, JavaScript</td><td>SDK .NET / DI API, SQL</td></tr>
+    <tr><td><strong>Millor per a</strong></td><td>Autònoms i pimes</td><td>Pimes amb necessitats a mida</td><td>Pimes grans amb processos complexos</td></tr>
+    <tr><td><strong>Personalització</strong></td><td>Limitada (API)</td><td>Molt alta</td><td>Alta, amb consultoria</td></tr>
+  </table>
+  </div>
+
+  <p>Holded destaca per la <strong>facilitat d'ús</strong> i l'<strong>adaptació a la normativa espanyola</strong>, i queda per sota en personalització. Els preus d'Odoo i SAP depenen de la configuració.</p>
+
+  <img src="img/logos.png" alt="Logotips de Holded, Odoo i SAP" width="500">
+</section>
+
+<!-- 8. OFERTES DE FEINA -->
+<section id="feina">
+  <h2>8. Ofertes de feina que demanen coneixements de Holded</h2>
+
+  <p>Hi ha dos tipus d'ofertes: les que demanen saber <strong>utilitzar</strong> Holded (administració, comptabilitat) i les de <strong>treballar per a</strong> Holded o per a partners seus.</p>
+
+  <div class="taula-contenidor">
+  <table>
+    <tr><th>Portal</th><th>Oferta</th><th>Requisits</th><th>Enllaç</th></tr>
+    <tr>
+      <td>InfoJobs (tipus 1)</td>
+      <td>Contable HOLDED a temps parcial</td>
+      <td>CFGS; +5 anys d'experiència; domini avançat de Holded (imprescindible); comptabilitat general, conciliacions i tancaments</td>
+      <td><a href="https://www.infojobs.net/barcelona/contable-holded-tiempo-parcial/of-iae7d0fbe2a4bf8a58186317fd2f437?applicationOrigin=search-new&amp;page=1&amp;sortBy=RELEVANCE" target="_blank">Oferta 1</a></td>
+    </tr>
+    <tr>
+      <td>InfoJobs (tipus 1)</td>
+      <td>Administrative &amp; Operations Assistant (Silbat Energy Storage Solutions), Madrid, presencial, jornada completa</td>
+      <td>CFGS; mínim 2 anys d'experiència; anglès avançat; ofimàtica i bases de dades (es valora Holded i Revolut People)</td>
+      <td><a href="https://www.infojobs.net/madrid/operations-assistant/of-ib84ddbae0d4bd2b1f5ab99a1e1928c?applicationOrigin=search-filtered&amp;page=1&amp;sortBy=RELEVANCE" target="_blank">Oferta 2</a></td>
+    </tr>
+    <tr>
+      <td>Indeed (tipus 2)</td>
+      <td>Product Data Analyst (Holded), Barcelona, híbrid, jornada completa, contracte indefinit</td>
+      <td>Grau en Informàtica o similar (o màster en Data Science); 1-3 anys en dades/analítica; bon SQL; modelatge de dades; castellà (nivell de treball) i anglès intermedi; viure a Barcelona; es valora dbt, BigQuery, Lightdash i Python</td>
+      <td><a href="https://es.indeed.com/viewjob?jk=8c331ce1dbb312a4&amp;from=shareddesktop_copy" target="_blank">Oferta 3</a></td>
+    </tr>
+    <tr>
+      <td>Indeed (tipus 2)</td>
+      <td>Accounting Support Specialist (Phone) (Holded), Barcelona, híbrid, jornada completa, contracte indefinit</td>
+      <td>1+ any en call center o atenció al client; comunicació escrita excel·lent; coneixements bàsics de finances; castellà natiu i anglès fluid; es valora experiència en SaaS i eines com Intercom, Zendesk o Aircall</td>
+      <td><a href="https://es.indeed.com/viewjob?jk=59e185a9c914b0d7&amp;from=shareddesktop_copy" target="_blank">Oferta 4</a></td>
+    </tr>
+  </table>
+  </div>
+
+  <img src="img/exempleoferta.png" alt="Captura d'una oferta de feina amb Holded">
+</section>
+
+<!-- 9. AVANTATGES I INCONVENIENTS -->
+<section id="avantatges">
+  <h2>9. Avantatges i inconvenients</h2>
+
+  <div class="taula-contenidor">
+  <table>
+    <tr><th>Punts forts</th><th>Punts dèbils</th></tr>
+    <tr><td>Interfície intuïtiva i fàcil d'aprendre</td><td>Personalització limitada (programari tancat)</td></tr>
+    <tr><td>100% al núvol, sense instal·lar res</td><td>Només SaaS, no es pot instal·lar al propi servidor</td></tr>
+    <tr><td>Tots els mòduls integrats en una sola plataforma</td><td>Funcions com inventari, TPV i nòmines es paguen a part</td></tr>
+    <tr><td>Adaptat a la normativa espanyola (Verifactu, SII)</td><td>No té pla gratuït permanent, només prova de 14 dies</td></tr>
+    <tr><td>API REST oberta i integracions amb Shopify, Stripe, Zapier, etc.</td><td>Pot quedar-se curt per a empreses grans o processos de fabricació complexos</td></tr>
+    <tr><td>Accés per a l'assessoria/gestoria sense cost addicional</td><td>El preu creix amb usuaris addicionals (10 € per usuari extra)</td></tr>
+    <tr><td>Escala des d'autònoms fins a pimes</td><td>Menys funcionalitat en comptabilitat avançada que programes especialitzats</td></tr>
+  </table>
+  </div>
+</section>
+
+<!-- 10. BIBLIOGRAFIA -->
+<section id="bibliografia">
+  <h2>10. Bibliografia i fonts</h2>
+  <ul>
+    <li><a href="https://www.visma.com/newsroom/visma-moves-into-the-spanish-smb-market-by-acquiring-cloud-erp-software-company-holded-d6642128" target="_blank">Visma - adquisició de Holded</a></li>
+    <li><a href="https://www.elnacional.cat/oneconomia/ca/startups/holded-programari-passar-0-190-milions-cinc-anys-no-haviem-pensat-vendre-visma_1073010_102.html" target="_blank">El Nacional - Holded, de 0 a 190 milions en cinc anys</a></li>
+    <li><a href="https://forbes.es/brandvoice/581332/como-javi-fondevila-y-bernat-ripoll-fundaron-holded-para-transformar-las-pymes/" target="_blank">Forbes - Cómo Javi Fondevila y Bernat Ripoll fundaron Holded</a></li>
+    <li><a href="https://www.visma.com/insights/content/meet-the-entrepreneurs-behind-startup-success-holded" target="_blank">Visma - Meet the entrepreneurs behind Holded</a></li>
+    <li><a href="https://www.holded.com/cloud-erp" target="_blank">Holded - Cloud ERP</a></li>
+    <li><a href="https://www.jobfluent.com/es/empresa/holded" target="_blank">Jobfluent - Holded</a></li>
+    <li><a href="https://www.holded.com/tac" target="_blank">Holded - Termes i condicions</a></li>
+    <li><a href="https://www.prodegest.com/holded-que-es-como-funciona/" target="_blank">Prodegest - Holded: qué es y cómo funciona</a></li>
+    <li><a href="https://www.holded.com/es/precios" target="_blank">Holded - Precios</a></li>
+    <li><a href="https://www.holded.com/erp-for-smes" target="_blank">Holded - ERP for SMEs</a></li>
+    <li><a href="https://www.holded.com/es/erp" target="_blank">Holded - ERP</a></li>
+    <li><a href="https://www.holded.com/es/blog/software-gestion-empresarial" target="_blank">Holded - Blog: software de gestión empresarial</a></li>
+    <li><a href="https://www.holded.com/es/solution-partners-directorio" target="_blank">Holded - Directorio de partners</a></li>
+    <li><a href="https://developers.holded.com/reference/api-key" target="_blank">Holded Developers - API Key</a></li>
+    <li><a href="https://help.holded.com/en/articles/6896051-how-to-generate-and-use-the-holded-api" target="_blank">Holded Help - How to generate and use the Holded API</a></li>
+    <li><a href="https://academy.holded.com/hc/en-us/articles/360030969952-How-to-use-Holded-s-API" target="_blank">Holded Academy - How to use Holded's API</a></li>
+    <li><a href="https://techcrunch.com/?p=1816233" target="_blank">TechCrunch (1)</a></li>
+    <li><a href="https://techcrunch.com/?p=2107162" target="_blank">TechCrunch (2)</a></li>
+    <li><a href="https://app.dealroom.co/companies/holded" target="_blank">Dealroom - Holded</a></li>
+    <li><a href="https://aikount.com/holded-precios" target="_blank">Aikount - Holded precios</a></li>
+    <li><a href="https://www.g2.com/es/products/holded/pricing" target="_blank">G2 - Holded pricing</a></li>
+    <li>Ofertes de feina: enllaços de la secció 8 (InfoJobs i Indeed).</li>
+  </ul>
+</section>
+
+</main>
+
+<footer>
+  <p>Treball de Sistemes de Gestió Empresarial · 2n DAM · Holded</p>
+</footer>
+
+</body>
+</html>

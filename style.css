@@ -1,0 +1,112 @@
+/* ESTILS GENERALS */
+:root {
+  --accent: #d6204f;
+  --fosc: #1f2430;
+  --gris: #f4f5f7;
+  --vora: #dcdfe5;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--fosc);
+  line-height: 1.6;
+  background: #ffffff;
+}
+
+/* CAPÇALERA I MENÚ */
+header {
+  background: var(--fosc);
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px 30px;
+}
+header h1 { margin: 0 0 8px; font-size: 2.2rem; }
+header p  { margin: 0; color: #c9ced8; }
+
+nav {
+  background: var(--accent);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  text-align: center;
+  padding: 8px 10px;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: inline-block;
+  padding: 4px 8px;
+}
+nav a:hover { text-decoration: underline; }
+
+/* CONTINGUT */
+main { max-width: 980px; margin: 0 auto; padding: 20px; }
+
+section { padding: 30px 0; border-bottom: 1px solid var(--vora); }
+section:last-child { border-bottom: none; }
+
+h2 { color: var(--accent); margin-top: 0; font-size: 1.7rem; }
+h3 { margin-bottom: 6px; }
+
+a { color: var(--accent); }
+ul { padding-left: 22px; }
+
+/* ESPAIS PER A IMATGES */
+.placeholder {
+  border: 2px dashed #aab0bd;
+  background: var(--gris);
+  color: #5b6272;
+  text-align: center;
+  padding: 50px 20px;
+  margin: 18px 0;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+img { max-width: 100%; height: auto; display: block; margin: 18px auto; border-radius: 6px; }
+
+/* TAULES */
+.taula-contenidor { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; margin: 15px 0; font-size: 0.95rem; }
+th, td { border: 1px solid var(--vora); padding: 8px 10px; text-align: left; vertical-align: top; }
+th { background: var(--fosc); color: #fff; }
+tr:nth-child(even) td { background: var(--gris); }
+
+/* CRONOLOGIA */
+.cronologia { list-style: none; padding-left: 0; border-left: 3px solid var(--accent); }
+.cronologia li { margin: 0 0 14px 0; padding-left: 16px; }
+.cronologia strong { color: var(--accent); }
+
+/* GRÀFIC DE BARRES (preus) */
+.grafic { margin: 15px 0; }
+.fila { display: flex; align-items: center; margin-bottom: 8px; }
+.fila .etiqueta { width: 110px; font-size: 0.9rem; }
+.fila .barra-fons { flex: 1; background: var(--gris); border-radius: 4px; }
+.fila .barra { background: var(--accent); color: #fff; padding: 4px 8px; border-radius: 4px; font-size: 0.85rem; white-space: nowrap; }
+
+/* CAIXES */
+.caixes { display: flex; flex-wrap: wrap; gap: 15px; }
+.caixa { flex: 1 1 260px; border: 1px solid var(--vora); border-radius: 6px; padding: 14px 16px; }
+.caixa h3 { margin-top: 0; }
+
+pre {
+  background: var(--fosc);
+  color: #e6e9ef;
+  padding: 14px;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 0.85rem;
+}
+
+.nota { font-size: 0.9rem; color: #5b6272; }
+
+footer { background: var(--fosc); color: #c9ced8; text-align: center; padding: 20px; font-size: 0.9rem; }
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  header h1 { font-size: 1.6rem; }
+  .fila .etiqueta { width: 80px; }
+}
